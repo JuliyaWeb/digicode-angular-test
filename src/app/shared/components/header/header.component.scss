@@ -1,0 +1,12 @@
+.navbar {
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.3);
+  height: 60px;
+  color: white;
+
+  &-link {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,11 @@
+<div class="content-inner" *ngIf="guidelines">
+  <div class="text-center mb-5">
+    <h1 class="title text-capitalize">{{guidelines.title}}</h1>
+  </div>
+  <div class="content-text">
+    <ng-container *ngFor="let item of guidelines.content">
+      <h3 class="grey">{{item.subtitle}}</h3>
+      <p>{{item.textContent}}</p>
+    </ng-container>
+  </div>
+</div>

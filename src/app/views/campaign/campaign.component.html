@@ -1,0 +1,37 @@
+<div class="content-inner" *ngIf="campaign">
+  <div class="text-center mb-5">
+    <h1 class="title text-capitalize">{{campaign.title}}</h1>
+    <h4 class="subtitle grey">{{campaign.subTitle}}</h4>
+  </div>
+
+  <div class="container">
+    <div class="row flex-xl-nowrap">
+      <div class="col-8">
+        <div class="media mb-3">
+          <iframe width="100%" height="350"
+                  [src]="getVideoUrl(campaign.media)" frameborder="0"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
+          </iframe>
+        </div>
+        <div class="content-body mt-2">
+          {{campaign.content}}
+        </div>
+      </div>
+      <div class="col-4 sidebar">
+        <div class="col">
+          <h5 class="price text-danger">{{campaign.price | currency}}</h5>
+          <p class="grey-light">Maximum contest prize</p>
+        </div>
+        <div class="col">
+          <h5>Budget Burndown</h5>
+          <p class="grey-light">Contest type</p>
+        </div>
+        <div class="col">
+          <h5>{{campaign.price | currency}}</h5>
+          <p class="grey-light">Budget left</p>
+        </div>
+        <button class="btn btn-lg btn-outline-danger">You have joined to context!</button>
+      </div>
+    </div>
+  </div>
+</div>
